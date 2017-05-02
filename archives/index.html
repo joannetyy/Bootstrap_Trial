@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>Kantai Ship Voting</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <h1>Kanmusu Voting App</h1>
+
+      <table>
+        <tr>
+          <td><img src="https://goo.gl/wSFhd2"></td>
+          <td>Vote Count: <span id="kongouCt" class="count">0</span><br><button type="button" onclick="increaseCount()" name="kongou">Burning Love!</button></td>
+          <td><img src="https://goo.gl/EPCZGI"></td>
+          <td>Vote Count: 0 <br><button type="button" name="hibiki">Verniy means "faithful" in Russian.</button></td>
+        </tr>
+        <tr>
+          <td><img src="https://goo.gl/7bQKny"></td>
+          <td>Vote Count: 0 <br><button type="button" name="shimakaze">I'm the fastest!</button></td>
+          <td><img src="https://goo.gl/Fov83w"></td>
+          <td>Vote Count: 0 <br><button type="button" name="hiryuu">Second attack phase required!</button></td>
+        </tr>
+      </table>
+
+      <script>
+        var x1 = 0
+        function increaseCount(){
+          x1 += 1
+          $("#kongouCt").html(x1)
+        }
+      </script>
+  </body>
+</html>

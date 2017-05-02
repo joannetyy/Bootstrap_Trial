@@ -1,0 +1,104 @@
+<html>
+<head>
+  <title>My Online Resume</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+  <!-- Custom styles for this template -->
+  <link href="cover.css" rel="stylesheet">
+  <style>
+  .imgHeight{
+    height: 300px;
+  }
+  </style>
+</head>
+<body>
+  <div class="site-wrapper">
+
+      <div class="site-wrapper-inner">
+
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Cover</h3>
+              <nav>
+                <ul class="nav masthead-nav">
+                  <li id="navHome" class="active"><a href="#home" onclick="goHome()">Home</a></li>
+                  <li id="navSkills"><a href="#skills" onclick="goSkills()">Skills</a></li>
+                  <li id="navContact"><a href="#contact" onclick="goContact()">Contact</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+
+          <div class="inner cover" id="home">
+            <center>
+              <img src="https://goo.gl/m56c8q" class="img-responsive img-circle imgHeight">
+            </center>
+            <h1 class="cover-heading">Good Morning! My name is Shimakaze.</h1>
+            <p class="lead">I am the fastest destroyer you can find in Kantai Collection! I usually travel with my Rensouhous, my trusty comrades during battle.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="skills">
+            <h1 class="cover-heading">These are my skills.</h1>
+            <p class="lead">I am the fastest destroyer you can find in Kantai Collection! I usually travel with my Rensouhous, my trusty comrades during battle.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="inner cover" id="contact">
+            <h1 class="cover-heading">Call me at 12341606.</h1>
+            <p class="lead">I am the fastest destroyer you can find in Kantai Collection! I usually travel with my Rensouhous, my trusty comrades during battle.</p>
+            <p class="lead">
+              <a href="#" class="btn btn-lg btn-default">Learn more</a>
+            </p>
+          </div>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  <script>
+    // Run everything inside this function when the page loads
+    $(function(){
+      $("#skills").hide()
+      $("#contact").hide()
+    })
+    function goHome(){
+      $("#home").slideDown()
+      $("#skills").hide()
+      $("#contact").hide()
+      $("#navHome").attr('class','active')
+      $("#navSkills").attr('class','')
+      $("#navContact").attr('class','')
+    }
+    function goSkills(){
+      $("#home").hide()
+      $("#skills").slideDown()
+      $("#contact").hide()
+      $("#navHome").attr('class','')
+      $("#navSkills").attr('class','active')
+      $("#navContact").attr('class','')
+    }
+    function goContact(){
+      $("#home").hide()
+      $("#skills").hide()
+      $("#contact").slideDown()
+      $("#navHome").attr('class','')
+      $("#navSkills").attr('class','')
+      $("#navContact").attr('class','active')
+    }
+  </script>
+</body>
+</html>
